@@ -2,6 +2,9 @@ $("#page-sidebar-header").load( "./sidebar.html", function() {
     $("#me_img").attr("src",$("#temp-img").attr('src'));
     $("#temp-img").remove();
     close_sidebar();
+    if(document.getElementById("no-sidebar-button")) {
+        $("toggle-sidebar").remove();
+    }
     type_out_profession();
 });
 
