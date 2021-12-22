@@ -1,0 +1,224 @@
+body
+{
+    background-image: linear-gradient(to bottom, #1e501e,#0b2c0b);
+}
+
+#games-header
+{
+    background-color:rgb(0, 138, 46);
+    color:white;
+}
+
+/* Sections (Games) */
+.game-work
+{
+    list-style-type: none;
+    padding-left:16px;
+}
+
+.game-work li::before{ 
+  
+    content: "\2794 "; 
+    margin-right:4px;
+} 
+
+
+
+#title_canvas
+{
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+
+
+#section-scavshow
+{
+    background-color: rgb(199, 250, 255);
+}
+
+#section-canvas
+{
+    padding-bottom:80px;
+    background-color:whitesmoke;
+}
+
+#section-builtup
+{
+    background-color: #011B52;
+    background-image: url("../images/builtup_grid_blur.png");
+    color:white;
+    animation: builtup-scroll 120s linear 0s infinite normal;
+
+    box-shadow: 3px 3px 10px black inset, 4px 4px 6px black;
+    -moz-box-shadow: 3px 3px 10px black inset, 4px 4px 6px black;
+    -o-box-shadow: 3px 3px 10px black inset, 4px 4px 6px black;
+    -webkit-box-shadow: 3px 3px 10px black inset, 4px 4px 6px black;
+}
+
+@keyframes builtup-scroll
+{
+    from { background-position: 0px; }
+    to { background-position: 820px 410px; }
+}
+
+#section-builtup p, #section-builtup ul
+{
+    text-shadow: 1px 1px rgba(0,0,0,0.9);
+} 
+#section-ramigo
+{
+    background-color: #cecfc1;
+}
+#section-dpf
+{
+    background-color: #c0ecbe;
+}
+
+#logo-builtup
+{
+    width:auto;
+    height:96px;
+}
+
+#logo-scavshow
+{
+    width:516px;
+    height:auto;
+}
+
+#canvas-border
+{
+    position: absolute;
+    z-index: 9;
+    bottom:0px;
+    margin-left:-8px;
+    padding:0;
+    height:32px;
+    width:100%;
+    background-image: url("../images/canvas_border.png");
+    background-repeat: repeat-x;
+}
+
+/* background images */
+
+#scavshow-bg
+{
+    /* background-image: url("../images/scavshow_map.png"); */
+    background-image: url("../images/compressed/scavshow_map.jpg");
+}
+
+#canvas-bg
+{
+    /* background-image: url("../images/canvas-bg2.png"); */
+    background-image: url("../images/compressed/canvas-bg2.jpg");
+}
+
+#built-up-bg
+{
+    /* background-image: url("../images/built-up-courtyard.png"); */
+    background-image: url("../images/compressed/built-up-courtyard.jpg");
+}
+
+#ramigo-bg
+{
+    /* background-image: url("../images/ramigo_bg.png"); */
+    background-image: url("../images/compressed/ramigo_bg.jpg");
+}
+
+#dpf-bg
+{
+    /* background-image: url("../images/dpf_bg2.png"); */
+    background-image: url("../images/compressed/dpf_bg2.jpg");
+}
+
+#scavshow-title
+{
+    text-transform: uppercase;
+    font-family: 'Menu';
+    color:#777;
+    text-shadow: -1px 1px black;
+    margin-top:0;
+    font-size:48px;
+}
+
+.bg-image
+{
+    z-index:-9;
+
+    /* Add the blur effect */
+    filter: blur(5px) brightness(70%);
+    
+    /* Full height */
+    position:absolute;
+    left:-21.42%;
+    width: calc(100% + (2 * 21.42%));
+    height:100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.play-button
+{
+    position: absolute;
+    bottom:0;
+    left:0;
+
+    font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
+    font-display: swap;
+
+    background-color: rgb(0, 112, 37);
+    border-radius: 0px 8px 0px 0px;
+    box-shadow: 8px 0px rgb(15, 66, 0);
+    font-size:22px;
+
+    text-decoration: underline;
+    padding:0.4em;
+    color:white;
+}
+
+.play-button i 
+{
+    padding-right:8px;
+}
+
+.play-button:visited, .dark .play-button:visited
+{
+    color:white;
+}
+
+.canvas-button
+{
+    bottom:32px;
+}
+
+.play-button.disabled
+{
+    background-color: rgb(105, 105, 105);
+    box-shadow: 8px 0px rgb(73, 73, 73);
+}
+
+.play-button.disabled:hover
+{
+    background-color: rgb(105, 105, 105);
+    box-shadow: 8px 0px rgb(73, 73, 73);
+    padding-left: 8px;
+}
+
+.play-button:hover
+{
+    background-color: rgb(0, 138, 46);
+    /* transform: translateX(4px); */
+    padding-left:12px;
+    box-shadow: 4px 0px rgb(15, 66, 0);
+}
+
+.play-button:active
+{
+    padding-left:16px;
+    transform: translateX(0px);
+    box-shadow: -2px 0px rgb(15, 66, 0); 
+}

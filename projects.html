@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/97d927f12c.js" crossorigin="anonymous"></script>
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script defer src="scripts/prof.js"></script>
+        <script defer src="scripts/sidebar.js"></script>
+        <script defer src="scripts/projects.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/projects.css">
+        <link rel="stylesheet" href="styles/preview.css">
+        <link rel="stylesheet" href="styles/mobile.css">
+        <link rel="stylesheet" href="styles/compat.css">
+        <link rel="stylesheet" href="styles/menu-font.css">
+        <link rel="stylesheet" href="styles/font_console.css">
+        
+        <link rel="shortcut icon" type="image/png" href="./images/favicon/favicon_projects.png"/>
+
+        <title>Projects | Max Iraci-Sareri</title>
+    </head>
+    <body >
+        <img id="temp-img" src="images/avatars/avatar_projects.png" />
+        <header id="page-sidebar-header">
+            <!-- Header dynamically loaded here with jQuery -->
+        </header>
+        <div id="projects-bg">
+            <pre id="bg-body"></pre>
+            <pre id="bg-body2"></pre>
+        </div>
+        <div id="title">
+
+        </div>
+        <main>
+            <nav id="homepage-return">
+                <a href="index.html"><i class="fas fa-level-up-alt"></i>Back to Homepage</a>
+            </nav>
+            <header class="page-header" id="projects-header">
+                <h1>Projects</h1>
+                <p>
+                    This page displays many other projects or other works I have created that are worth displaying. <br />
+                    This includes development on programs and academic writing I have created during my time at university, alongside personal projects.
+                </p>
+            </header>
+            <section id="section-textalogue">
+                <div aria-disabled="true" id="textalogue" class="nav-href"></div>
+                <h2>Textalogue</h2>
+                <figure class="preview-video">
+                    <img class="preview-content" src="./images/textalogue_v3.png" alt="Textalogue">
+                    <figcaption>Textalogue's <em>Dialogue Editor</em> UI</figcaption> 
+                </figure> 
+                <ul class="game-info">
+                    <li>Platform: Unity</li>
+                    <li>Status: [In Development]</li>
+                </ul>
+                <p>Textalogue is a tool currently in development for the Unity game engine used to create dynamic textboxes and 
+                    dialogue systems. Using a visually-intuitive node system, no code skills are required to add and modify dialogue quickly and easily.</p>
+                <p><cite>Textalogue</cite>'s features include:</p>                
+                <ul class="game-work">
+                    <li>node-based UI functionality for easier visualisation</li>
+                    <li>dialogue choices leading to separate dialogue paths</li>
+                    <li>dialogue "warps" allowing for repeated sections or continuous conversation</li>
+                    <li>custom text color and scroll speed, alongside the ability to mark text as unskippable</li>
+                    <li>fully-customisable drag-and-drop textbox prefab working inside Unity's Canvas element</li>
+                    <li>support for setting variables to custom values in-editor and through code to track previous decisions</li>
+                    <li>event systems, allowing use of Unity Events mid-dialogue (Textalogue can also wait for an event to complete before continuing)</li>
+                    <li>planned export/import of mapped dialogue to and from a CSV file to assist in localisation</li>
+                </ul>
+            </section>
+            <section id="section-website">
+                <div aria-disabled="true" id="portfolio-site" class="nav-href"></div>
+                <h2>Portfolio Website</h2>
+
+                <!-- Awesome interactive draggable site-size demonstration! -->
+                <figure id="recursive-site" class="recursive-site jquery-required">
+                    <h2 id="recursive-site-width">Drag the left side to test the adaptive design! </h2>
+                    <div class="resize-handle-left ui-resizable-handle ui-resizable-w">
+                        <i class="fas fa-arrows-alt-h lr-arrow"></i>
+                        <i class="fas fa-arrows-alt-h lr-arrow lr-bottom"></i>
+                    </div>
+                    <iframe class="website-zoom" src="./games" frameborder="0" allowfullscreen></iframe>
+                </figure>
+                <!-- Boring static image replacement, for mobile devices or old browsers that don't really support jQuery UI -->
+                <figure class="preview-video old-browser-compat desktop-only">
+                    <img loading="lazy" class="preview-content" src="./images/portfolio_site_static.jpg" alt="Portfolio website">
+                    <figcaption>
+                        My portfolio website. <br />
+                        Load this page in a modern desktop-based browser for an interactive demo!
+                    </figcaption>
+                </figure> 
+
+                <p>(yes, the one you're on right now!)</p>
+                <p>This website features:</p>
+                <ul class="game-work portfolio-p">
+                    <li>minimal JavaScript</li>
+                    <li>no HTML templates (built from scratch!)</li>
+                    <li>no CSS templates!</li>
+                    <li>
+                        adaptive design 
+                        <span class="modern-browsers-only">(try it: drag the left side of the frame!)</span>
+                        <span class="old-browser-compat">(works on any size of browser, including mobile devices)</span>
+                    </li>
+                    <li>compatibility (most content works back to Internet Explorer 9, representing about 99% of browser usage)</li>
+                    <li>accessibility (compliant with the <a target="_blank" rel="noopener noreferrer" href="https://www.w3.org/TR/WCAG22/">2021 W3 Web Content Accessibility Guidelines</a>)</li>
+                </ul>
+                <p>
+                    
+                </p>
+                <br />
+            </section>
+            <section id="section-timeframe">
+                <img id="logo-timeframe" src="images/timeframe/timeframe_logo.png" alt="TimeFrame Logo">
+                <figure class="preview-video">
+                    <img class="preview-content" src="./images/timeframe/timeframe_weekly.png" alt="TimeFrame's 'Weekly' Display">
+                    <figcaption><cite>TimeFrame's</cite> 'Weekly' Display</figcaption> 
+                </figure>
+                <p>Finalist in The University of Adelaide's Tech eChallenge 2021</p>
+                <p>TimeFrame is a product concept pitched to industry professionals as part of the 2021 Tech eChallenge. 
+                    It is designed to function as an automatic scheduling application primarily to help students get schedules they can follow.
+                    TimeFrame auto-assigns schedules based on very little user input, using machine learning to discover and refine personalised schedules.
+
+                </p>
+            </section>
+            <section id="section-stackoverflow">
+                <h2>Stack Overflow Post Improver</h2>
+                <aside class="link-aside">
+                    <a href="#">
+                        <button class="aside-button">
+                            <i class="pdf-icon fas fa-file-alt"></i>
+                            Automatically improving natural language in software documentation using Stack Overflow edits.pdf <br />
+                            <span class="click-to-view long-ctv">(click to view)</span>
+                        </button>
+                    </a>
+                </aside>
+                <p>Topics in Computer Science 2020 at The University of Adelaide</p>
+                <p>
+                    The scope of software documentation resources includes both official resources like API documentation and crowd-sourced websites such as Stack Overflow. 
+                    Threads on Stack Overflow contribute greatly to documentation but are of varying quality. Posts on Stack Overflow are publicly editable, 
+                        with users optionally providing descriptive edit messages. 
+                    These edits are categorised in the paper "An Annotated Dataset of Stack Overflow Post Edits".
+                    <br />
+                    To improve them, this project develops and evaluates a prototype model to improve basic post readability using the results from this dataset. 
+                    This was achieved primarily through use of natural language processing and machine learning, alongside trivial readability improvements. 
+                    The resulting program can fix trivial issues such as sentence casing and formatting, and also warns users when often-redundant information 
+                    is added to posts or documentation.
+                </p>
+            </section>
+            <section id="section-h5p">
+                <h2>H5P: Code Editor</h2>
+                <figure class="preview-video">
+                    <img class="preview-content" src="./images/code_editor_final.png" alt="H5P Code Editor">
+                    <figcaption><em>Code Editor</em> UI</figcaption> 
+                </figure>
+                <aside class="link-aside">
+                    <a href="#">
+                        <button class="aside-button">
+                            <i class="pdf-icon fas fa-file-alt"></i>
+                            H5P - Code Editor.pdf <br />
+                            <span class="click-to-view">(click to view)</span>
+                        </button>
+                    </a>
+                </aside>
+                <p>Advanced Topics in Computer Science 2021 at The University of Adelaide</p>
+                <p>H5P is an open-source online content project run by community members. 
+                    Using HTML5 content amongst JavaScript and CSS, H5P provides interactive web content 
+                        through an easy-to-use plugin that can be directly integrated into other web pages. <br />
+                    While H5P has many different functions and elements, no code editor exists. <br />
+                    This project investigates a means to create such an editor through the H5P platform, 
+                    including research on existing JavaScript-based editors, accessibility, 
+                    and compliance to H5P's standards and the W3C Web Content Accessibility Guidelines.</p>
+            </section>
+            
+        </main>
+        <footer class="dark">
+            <p>Site design by me. I made this.</p>
+            <p>with fonts by <a href="https://github.com/pixeldroid/fonts">pixeldroid</a></p>
+        </footer>
+    </body>
+</html>

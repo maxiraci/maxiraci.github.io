@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/97d927f12c.js" crossorigin="anonymous"></script>
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script defer src="scripts/prof.js"></script>
+        <script defer src="scripts/sidebar.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/games.css">
+        <link rel="stylesheet" href="styles/preview.css">
+        <link rel="stylesheet" href="styles/mobile.css">
+        <link rel="stylesheet" href="styles/menu-font.css">
+        <link rel="stylesheet" href="styles/font_console.css">
+        <link rel="stylesheet" href="styles/compat.css">
+        
+        <link rel="shortcut icon" type="image/png" href="./images/favicon/favicon_games.png"/>
+        
+        <title>Games | Max Iraci-Sareri</title>
+    </head>
+    <body>
+        <img id="temp-img" src="images/avatars/avatar_games.png" />
+        <header id="page-sidebar-header">
+            <!-- Header dynamically loaded here with jQuery -->
+        </header>
+        <div id="title">
+
+        </div>
+        <main>
+            <nav id="homepage-return">
+                <a href="index.html"><i class="fas fa-level-up-alt"></i>Back to Homepage</a>
+            </nav>
+            <header class="page-header" id="games-header">
+                <h1>Games</h1>
+                <p>
+                    Here are a selection of games either finished or finished <em>enough</em> to warrant talking about. <br />
+                    These include games from game jams, games as projects for university, and my own personal game projects.
+                </p>
+            </header>
+            <section id="section-scavshow">
+                <div aria-disabled="true" id="scavenger-showdown" class="nav-href"></div>
+                <div class="bg-image" id="scavshow-bg"></div>
+                <img id="logo-scavshow" src="./images/scavenger_showdown_logo.png" alt="Scavenger Showdown Logo">
+                <figure class="preview-video">
+                    <img class="preview-content" src="./images/scavshow_gameplay.jpg" alt="Scavenger Showdown Gameplay">
+                    <!-- <figcaption>(todo: get scavenger-showdown video!)</figcaption>  -->
+                </figure>
+                <ul class="game-info">
+                    <li>Platforms: Windows, WebGL</li>
+                    <li>Release Date: January 2021</li>
+                </ul>
+                <p>
+                    <cite>Scavenger Showdown</cite> was created in 48 hours as part of the 2021 Global Game Jam. <br />
+                    The theme for the game jam was "Lost and Found"; our group created a competitive collectathon party game where each player must
+                    find a set of items in a specific order before everyone else. Combat enhances this gameplay by allowing players to attack anyone nearby, 
+                    making them lose precious time.
+                    <br />
+                    The game can also be played single-player, where it becomes a race
+                    against the clock for the best speedrun time.  
+                </p>
+                <p>For <cite>Scavenger Showdown</cite>, I worked on:</p>
+                <ul class="game-work">
+                    <li>game design/balance</li>
+                    <li>gameplay programming</li>
+                    <li>UI programming </li>
+                    <li>music (<a href="./music#scavenger-showdown">listen to the OST here!</a>) </li>
+                </ul>
+                <a class="play-button" target="_blank" rel="noopener noreferrer" href="https://sarexicus.itch.io/scavenger-showdown">
+                    <i class="far fa-play-circle"></i>Play the game online!
+                </a>
+            </section>
+            <section id="section-canvas">
+                <div aria-disabled="true" id="canvas" class="nav-href"></div>
+                <div class="bg-image" id="canvas-bg"></div>
+                <h2 id="title_canvas">Canvas</h2>
+                <figure class="preview-video">
+                    <iframe class="preview-content" loading="lazy" src="https://www.youtube.com/embed/uEWG3RlAepk" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                    <figcaption>Footage of Canvas' 2019 build. Heavily updated since then. <br />
+                    (todo: get better footage!)</figcaption>
+                </figure>
+                <ul class="game-info">
+                    <li>Platforms: Windows, MacOS</li>
+                    <li>Release Date: 2021 (demo)</li>
+                </ul>
+                <p>Canvas is a party rhythm game where the aim is to coat the most surfaces as possible with your team's paint.</p>
+                <p><cite>Canvas</cite> has been presented twice as part of the <cite><a href="http://www.theindiegamesroom.com/">AVCon Indie Games Room</a></cite>, in 2017 and 2019.</p>
+                <p>For <cite>Canvas</cite>, I worked on:</p>
+                <ul class="game-work">
+                    <li>game design/balance</li>
+                    <li>gameplay programming</li>
+                    <li>UI design / programming </li>
+                    <li>art (2D/3D/UI)</li>
+                    <li>music (<a href="./music#canvas">listen to some of the OST here!</a>) </li>
+                </ul>
+                <a class="canvas-button play-button disabled" href="#">
+                    <i class="far fa-play-circle"></i>Demo (coming soon)
+                </a>
+                <div id="canvas-border"></div>
+            </section>
+            <section class="dark" id="section-builtup">
+                <div aria-disabled="true" id="built-up" class="nav-href"></div>
+
+                <div class="bg-image" id="built-up-bg"></div>
+                <img id="logo-builtup" src="images/built-up-logo.png" alt="Built-Up!">
+                <figure class="preview-video">
+                    <iframe class="preview-content" loading="lazy" src="https://www.youtube.com/embed/srDIEAhQ_ys" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                    <figcaption><cite>Built-Up!</cite> appears first (at 0:38) in this showcase of games for <cite>The University of Adelaide's </cite>VR courses.<br />
+                    (Music from <cite>Built-Up!</cite> was used as the backing track of the showcase!)</figcaption>
+                </figure>
+                <ul class="game-info">
+                    <li>Platforms: Windows (<a href="https://www.steamvr.com">SteamVR-compatible</a> hardware)</li>
+                    <li>Release Date: 2020</li>
+                </ul>
+                <p>
+                    <cite>Built-Up! </cite> is a VR building game about creative construction and coffee-cup relocation. <br />
+                    Using simple building blocks and connectors, players create innovative solutions to various problems to knock over coffee cups in various locations. <br />
+                    I assisted in creating this game as lead programmer and composer alongside six other developers as part of my <cite>Virtual Reality Design and Development II</cite> course at <cite>The University of Adelaide.</cite>
+                </p>
+                <p>For <cite>Built-Up! </cite>, I worked on:</p>                
+                <ul class="game-work">
+                    <li>game design/concept</li>
+                    <li>gameplay programming</li>
+                    <li>physics programming </li>
+                    <li>SteamVR integration</li>
+                    <li>music (<a href="./music#built-up">listen to the OST here!</a>) </li>
+                </ul>
+                <a class="play-button disabled" href="#">
+                    <i class="far fa-play-circle"></i>Download (coming soon)
+                </a>
+            </section>
+            <section id="section-ramigo">
+                <div aria-disabled="true" id="ramigo" class="nav-href"></div>
+                <div class="bg-image" id="ramigo-bg"></div>
+                <h2>RAMiGo</h2>
+                <figure class="preview-video">
+                    <img class="preview-content" src="./images/ramigo_bg.png" alt="RAMiGo Gameplay">
+                    <!-- <figcaption>(todo: get scavenger-showdown video!)</figcaption>  -->
+                </figure>
+                <ul class="game-info">
+                    <li>Platforms: Windows (<a href="https://www.vrtk.io/">VRTK-compatible</a> hardware)</li>
+                    <li>Release Date: 2020</li>
+                </ul>
+                <p>
+                    RAMiGo (short for Rooftop Apocalyptic MiniGolf), is a VR mini-golfing experience. <br />
+                    Players must navigate golf balls through 9 increasingly-difficult mini courses reminiscent of classic mini-golf. <br />
+                    I created this game independently as part of my <cite>Virtual Reality Design and Development I</cite> course at <cite>The University of Adelaide.</cite>
+                </p>     
+                <p>For RAMiGo, I worked on:</p>                
+                <ul class="game-work">
+                    <li>game design/concept</li>
+                    <li>gameplay programming</li>
+                    <li>physics programming </li>
+                    <li>3D modelling/rigging</li>
+                    <li>VRTK integration</li>
+                    <li>music (<a href="./music#ramigo">listen to the OST here!</a>) </li>
+                </ul>
+                <a class="play-button disabled" href="#">
+                    <i class="far fa-play-circle"></i>Download (coming soon)
+                </a>
+            </section>
+            <section id="section-dpf">
+                <div aria-disabled="true" id="downtown-patrol-force" class="nav-href"></div>
+                <div class="bg-image" id="dpf-bg"></div>
+                <h2>Downtown Patrol Force</h2>
+                <figure class="preview-video">
+                    <iframe class="preview-content" loading="lazy" src="https://www.youtube.com/embed/PMnm8X8mqRQ" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                    <figcaption>5-minute gameplay demonstration from <cite>Downtown Patrol Force</cite></figcaption>
+                </figure>
+                <ul class="game-info">
+                    <li>Platforms: Windows, MacOS</li>
+                    <li>Release Date: Unreleased (developed mostly in 2019)</li>
+                </ul>
+                <blockquote>It's 1982. The Downtown Patrol Force are looking for new members. Will you join them on this all new crazy adventure?</blockquote>
+                <p>
+                    <cite>Downtown Patrol Force</cite> is a top-down 3D open-world action-adventure game about "cop show" tropes/cliches. 
+                    With up to 4-player local co-op, players would patrol Mahogany Bay, Miamifornia and assist citizens while fighting crime.
+                </p>
+                <p>For Downtown Patrol Force, I worked on:</p>                
+                <ul class="game-work">
+                    <li>game design/concept</li>
+                    <li>environment art</li>
+                    <li>physics objects </li>
+                    <li><a href="./projects#textalogue">Textalogue, the custom dialogue engine for Unity 3D</a></li>
+                    <li>objective system + gameplay programming</li>
+                </ul>
+            </section>
+        </main>
+        <footer class="dark">
+            <p>Site design by me. <a href="./projects#portfolio-site">I made this.</a></p>
+            <p>with fonts by <a href="https://github.com/pixeldroid/fonts">pixeldroid</a></p>
+        </footer>
+    </body>
+</html>

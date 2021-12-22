@@ -1,0 +1,156 @@
+body
+{
+    background-color: #3b2a49;
+    background-image: linear-gradient(to bottom, #947ac4, #3b2a49);
+}
+
+main section>p
+{
+    width:70%;
+}
+
+#about-header
+{
+    background-color:rgb(91, 58, 143);
+    color:white;
+}
+
+section
+{
+    background-image: linear-gradient(180deg, rgb(233, 218, 250) 20% ,rgb(199, 171, 236)); 
+    padding-bottom: 8px;
+    box-shadow:         4px 4px 6px black;
+}
+
+.emph-overlay
+{
+    background-color: #d2cbf1;
+    box-shadow: 6px 6px rgba(14, 0, 27, 0.4);
+}
+
+.side-emph
+{
+    float:right;
+    margin-top:-1px;
+}
+
+address
+{
+    font-style:normal;
+}
+
+#contact-icons a, #contact-icons a:visited
+{
+    margin-top:0;
+    padding-top:0;
+    font-size:3em;
+    color:rgb(115, 60, 216);
+    text-shadow: 1px 1px rgb(16, 0, 37);
+
+}
+
+#contact-icons a:hover
+{
+    color:rgb(179, 151, 255);
+    transition: color 75ms linear;
+}
+#contact-icons a:active
+{
+    transform:translate(2px,2px);
+    text-shadow: none;
+}
+
+h3
+{    
+    font-size:1.25em;
+    display:block;
+    background-color: #370974;
+    color:white;
+    margin: -2px -8px -2px -8px;
+    padding:4px;
+    box-shadow: 0px 2px rgba(0,0,0,0.3);
+}
+
+h3>i
+{
+    font-size:1.3em;
+    color:lightgray;
+    text-shadow: 2px 2px gray;
+    padding-right:4px;
+}
+
+main li 
+{
+    list-style-type: none;
+    margin-left:-1em;
+}
+
+#contact
+{
+    float:right;
+    max-width:35%;
+}
+
+#skills-list
+{
+    list-style-type: none;
+}
+
+#skills-list li 
+{
+    margin-bottom: 3px;
+    margin-left:-1.5em;
+}
+
+#skills-list li::before
+{
+    content: ""; 
+    margin-right:0;
+}
+
+
+main li::before, #skills-list details li::before
+{
+    content: "\2794 "; 
+    margin-right:4px;
+}
+
+details
+{
+    padding-left:1.2em;
+}
+
+
+summary
+{
+    cursor:pointer;
+    color: #691acf;
+
+    /* IE compat */
+    display:block;
+
+    /* (sigh) Normal browser compat */
+    display:list-item;
+    
+    margin-bottom: 8px;
+    font-weight: bold;
+    margin-left:-1.2em;
+}
+
+summary span
+{
+    border-bottom: 2px dotted #691acf;
+    width:auto;
+}
+
+.no-footer-pad
+{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.no-header-pad
+{
+    margin-top:0;
+    padding-top:0;
+}

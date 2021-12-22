@@ -1,0 +1,212 @@
+body
+{
+    background-image: linear-gradient(to bottom, #193550, #07131f);
+    --music-bg: #0e2235;
+}
+
+section
+{
+    min-height:200px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+    background-color: #aac7e4;
+}
+
+#section-canvas
+{
+    padding-bottom:80px;
+    background-color:whitesmoke;
+    min-height: 250px;
+}
+
+#section-cyber
+{
+    background-image: linear-gradient(to right, rgb(59, 59, 59), rgb(26, 26, 26));
+}
+
+#section-builtup
+{
+    background-color: #011B52;
+    background-image: url("../images/builtup_grid_blur.png");
+    color:white;
+    animation: builtup-scroll 120s linear 0s infinite normal;
+
+    box-shadow: 3px 3px 10px black inset, 4px 4px 6px black;
+    -moz-box-shadow: 3px 3px 10px black inset, 4px 4px 6px black;
+    -o-box-shadow: 3px 3px 10px black inset, 4px 4px 6px black;
+    -webkit-box-shadow: 3px 3px 10px black inset, 4px 4px 6px black;
+}
+
+@keyframes builtup-scroll
+{
+    from { background-position: 0px; }
+    to { background-position: 820px 410px; }
+}
+
+#music-header
+{
+    background-color:rgb(18, 99, 146);
+    color:white;
+}
+
+
+/* main
+{
+    background-color: var(--music-bg);
+    border:8px solid var(--music-bg);
+} */
+
+.music-iframe
+{
+    background-color:rgba(0,0,0,0.3);
+    border:2px solid rgb(19, 66, 168);
+    box-shadow: 2px 2px 6px black;
+    margin: 0px 0px 0px 16px;
+    display:block; 
+    padding:0;
+    width:50%;
+    float:right;
+    height: 100%;
+}
+
+.bandcamp-iframe
+{
+    min-height:300px;
+    margin-bottom:2em;
+}
+
+.bandcamp-iframe::before
+{
+    content: "uh oh";
+}
+
+.soundcloud-iframe
+{
+    height: 120px;
+}
+
+iframe
+{
+    display:block; 
+    width: 100%;
+    height: 100%;
+}
+
+#preview-tracks
+{
+    list-style-type: none;
+}
+
+.audio-showcase
+{
+    min-width:60%; 
+    display:inline-block;
+    background-color:rgb(19, 66, 168);
+    
+    padding:0;
+    height:3.2em;
+
+    margin-bottom: 8px;
+    box-shadow: 4px 4px darkblue;
+}
+
+.audio-showcase audio
+{
+    width:400px;
+    height:3em;
+    display:inline-block;
+    padding:0;
+    margin:0;
+}
+
+.audio-showcase label
+{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top:-16px;
+    height:32px;
+    color:white;
+}
+
+/* 
+    scrolling music-note backgrounds
+*/
+.scrolling-bg
+{
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position:fixed;
+    display: block;    
+    box-shadow: 3px 3px 10px black inset;
+}
+
+#music-bgs
+{
+    position:fixed;
+    display: block;
+    z-index: -2;
+    opacity:0.4;
+}
+
+#music-bg1
+{
+    background-image: url("../images/backgrounds/music_notes_transparent_A.png");
+    animation: bg-scroll-a 120s linear 0s infinite normal;
+}
+
+#music-bg2
+{
+    background-image: url("../images/backgrounds/music_notes_transparent_B.png");
+    animation: bg-scroll-b 120s linear 0s infinite normal;
+}
+
+#music-bg3
+{
+    background-image: url("../images/backgrounds/music_notes_transparent_C.png");
+    animation: bg-scroll-c 120s linear 0s infinite normal;
+}
+
+@keyframes bg-scroll-a
+{
+    from { background-position: 0px; }
+    to { background-position: 1024px 1024px; }
+}
+
+@keyframes bg-scroll-b
+{
+    from { background-position: -256px; }
+    to { background-position: 1536px 2048px; }
+}
+@keyframes bg-scroll-c
+{
+    from { background-position: 384px; }
+    to { background-position: 1024px 2048px; }
+}
+
+#music-header-text
+{
+    margin:0.5em;
+    margin-left:0;
+    margin-top:0;
+    font-size:32px;
+}
+
+.sect-footer 
+{
+    position: absolute;
+    bottom:0;
+}
+
+.emph-overlay
+{
+    background-color: #1d3d83;
+    box-shadow: 6px 6px rgba(0, 5, 27, 0.4);
+    max-width: 100%;
+    padding: 8px;
+}
+
+.emph-overlay p
+{
+    padding:0;
+}

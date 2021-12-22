@@ -1,0 +1,98 @@
+/* 
+    Compatibility for older browsers
+*/
+
+/* Defaults common in modern HTML5 but not available in old browsers */
+details, main
+{
+    display: block;
+}
+
+/* Internet Explorer 6-10 */
+@media screen\0, screen\9
+{
+    .bg-image
+    {
+        background-attachment: scroll;
+    }
+    
+    #music-bg1
+    {
+        background-image: url("../images/backgrounds/music_notes_transparent.png");
+        animation: none;
+    }
+    #music-bg2, #music-bg3
+    {
+        display:none;
+    }
+
+    #section-canvas
+    {
+        max-height: none;
+    }
+
+    .bandcamp-iframe
+    {
+        display:none;
+    }
+    
+    .old-browser-compat
+    {
+        display:inline;
+    }
+    .modern-browsers-only
+    {
+        display: none;
+    }
+}
+
+/* Internet Explorer 10-11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+{
+    .bg-image
+    {
+        background-attachment: scroll;
+    }
+    
+    #music-bg1
+    {
+        background-image: url("../images/backgrounds/music_notes_transparent.png");
+        animation: none;
+    }
+    #music-bg2, #music-bg3
+    {
+        display:none;
+    }
+    #section-canvas
+    {
+        max-height: none;
+    }
+
+    .bandcamp-iframe
+    {
+        display:none;
+    }
+
+    .old-browser-compat
+    {
+        display:inline;
+    }
+    .modern-browsers-only
+    {
+        display: none;
+    }
+    
+    .recursive-site
+    {
+        display: none;
+    }
+}
+
+/* IE 6-8 only (no jQuery) */
+@media \0screen\,screen\9 
+{
+    .jquery-required
+    {
+        display: none;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/97d927f12c.js" crossorigin="anonymous"></script>
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script defer src="scripts/prof.js"></script>
+        <script defer src="scripts/sidebar.js"></script>
+        <script defer src="scripts/music.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/music.css">
+        <link rel="stylesheet" href="styles/mobile.css">
+        <link rel="stylesheet" href="styles/compat.css">
+        <link rel="stylesheet" href="styles/menu-font.css">
+        <link rel="stylesheet" href="styles/font_console.css">
+
+        <link rel="shortcut icon" type="image/png" href="./images/favicon/favicon_music.png"/>
+
+        <title>Music | Max Iraci-Sareri</title>
+    </head>
+    <body>
+        <img id="temp-img" src="images/avatars/avatar_music.png" />
+        <header id="page-sidebar-header">
+            <!-- Header dynamically loaded here with jQuery -->
+        </header>
+        <div id="music-bgs">
+            <div id="music-bg1" class="scrolling-bg"></div>
+            <div id="music-bg2" class="scrolling-bg"></div>
+            <div id="music-bg3" class="scrolling-bg"></div>
+        </div>
+        <div id="title">
+
+        </div>
+        <main>
+            <nav id="homepage-return">
+                <a href="index.html"><i class="fas fa-level-up-alt"></i>Back to Homepage</a>
+            </nav>
+            <header class="page-header dark" id="music-header">
+                <h1 id="music-header-text">I make music! Let me make some for you.</h1>
+                <p>
+                    I'd say most of my music falls under the <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/waltzforluma/status/1160421182425796608">"digital fusion"</a> genre; a mixture of "chiptune"-esque electronic synth music crossed with orchestral and other samples/genres. 
+                    Because this genre is pretty widely varied, I cover a variety of styles; see examples of my past work below. <br />
+                </p>
+                <p>If you'd like me to produce music for a project of yours, <a href="about.html#contact">get in touch.</a></p>
+            </header>
+            <article id="music">
+                <section class="dark" id="section-builtup">
+                    <h2>Built Up! OST</h2>                   
+                    <div class="old-browser-compat">
+                        <div class="music-iframe emph-overlay dark">
+                            <p>
+                                <a href="https://maxiraci.bandcamp.com/album/built-up-ost">Click here to listen to the Built Up! OST.</a> <br />
+                                (I'd embed it, but your browser doesn't support Bandcamp embeds.)
+                            </p>
+                        </div>
+                    </div>
+                    <iframe class="music-iframe bandcamp-iframe" src="https://bandcamp.com/EmbeddedPlayer/album=3119100651/size=large/bgcol=333333/linkcol=ffffff/artwork=small/transparent=true/" seamless>
+                        <a href="https://maxiraci.bandcamp.com/album/built-up-ost">Built Up! OST by Max Iraci-Sareri</a>
+                    </iframe>
+                    <p>
+                        <cite>Built-Up!</cite> is a VR building game about creative construction and coffee-cup relocation. 
+                        Using simple building blocks and connectors, players create innovative solutions to various problems to knock over coffee cups in various locations. <br />
+                        I assisted in creating this game as lead programmer and composer alongside six other developers as part of my <cite>Virtual Reality Design and Development II</cite> course at <cite>The University of Adelaide.</cite>
+                    </p>
+                    <p>
+                        The game is quite light-hearted with a simple cartoonish art-style, so I tried to encapsulate that feeling into the music; 
+                        the style is relatively upbeat and jovial. Tracks such as "City Life" or "If you Build It.." share this style in a way that I feel 
+                        fits the aim of the game quite well. For an ingame change of pace I created the more-subdued "Articulate", which still fits the building theme but as it's less intense it 
+                        gives the player room to think and experiment.
+                        <br />
+                        The tutorial section of <cite>Built-Up!</cite> ended up getting scrapped, but I had created music for it anyway; 
+                        "Learn the Ropes" I feel works as a tutorial theme as it's exciting yet mysterious.
+                        <br /> 
+                    </p> 
+
+                    
+                </section>
+                <section id="section-canvas">
+                    <h2>Canvas OST</h2>
+                    <div class="old-browser-compat">
+                        <div class="music-iframe emph-overlay dark">
+                            <p class="dark">
+                                <a href="https://maxiraci.bandcamp.com/album/canvas-ost-first-batch">Click here to listen to "Canvas OST - First Batch".</a> <br />
+                                (I'd embed it, but your browser doesn't support Bandcamp embeds.)
+                            </p>
+                        </div>  
+                    </div>
+                    <iframe class="music-iframe bandcamp-iframe" src="https://bandcamp.com/EmbeddedPlayer/album=3141022090/size=large/bgcol=cccccc/linkcol=e32c14/artwork=small/transparent=true/" seamless>
+                        <a href="https://maxiraci.bandcamp.com/album/canvas-ost-first-batch">Canvas OST - First Batch by Max Iraci-Sareri</a>
+                    </iframe>
+                    <p>The Canvas OST is split into several "batches", relating to the tracks in the game at the time. Currently only the first batch is released.</p>
+                    <p>
+
+                    </p>
+                </section>
+                <!-- <section class="dark" id="section-cyber">
+                    <h2>Cyberpunk Album (Upcoming)</h2>
+                    <iframe class="music-iframe soundcloud-iframe"
+                    allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1126407304&color=%234184be&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <p>
+
+                    </p>
+                </section> -->
+            </article>
+            <section id="section-preview-tracks">
+                <h2>Preview Track Showcase</h2>
+                <p>Below is a small showcase of some of my tracks that have yet to be formally released in any format, but are completed <em>enough</em> for me to share here. <br /> 
+                    <!-- Only a small segment of each track is displayed here; contact me if you want to use any of these for any reason. -->
+                </p>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1126224373%3Fsecret_token%3Ds-5mHejTrqOAZ&color=%234184be&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1126224367%3Fsecret_token%3Ds-5NlgnlffyIS&color=%234184be&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                <ul id="preview-tracks">
+                    <!-- <li class="audio-showcase">
+                        <audio id="aqua" controls controlsList="nodownload"> <source src="audio/aquamarine_loading_screen.mp3" type="audio/mpeg"> </audio>
+                        <label for="aqua">"aquamarine_loading_screen.mp3"</label>
+                    </li>
+                    <li class="audio-showcase">
+                        <audio id="worldmap" controls controlsList="nodownload"> <source src="audio/whimsical_worldmap.mp3" type="audio/mpeg"> </audio>
+                        <label for="worldmap">"whimsical_worldmap.mp3"</label>
+                    </li> -->
+                </ul>
+                
+            </section>
+        </main>
+        <footer class="dark">
+            <p>Site design by me. <a href="./projects#portfolio-site">I made this.</a></p>
+            <p>with fonts by <a href="https://github.com/pixeldroid/fonts">pixeldroid</a></p>
+        </footer>
+    </body>
+</html>
