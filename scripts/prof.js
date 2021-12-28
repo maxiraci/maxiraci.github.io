@@ -9,7 +9,7 @@ var professions = [
   "Composer",
   "Programmer",
   "Jack-of-all-trades",
-  "University Student",
+  "University Graduate",
   "Web Developer",
   "VR Developer"
 ];
@@ -73,7 +73,7 @@ function choose_next_profession()
     nextProfessionIndex = profnew;
 }
 
-// remove current profession text up until it would make sense for the typist to stop
+// remove current profession text up until it would make sense for the typist to stop (as it's already there)
 function erase_profession_text() {
   var _currentLen = get_text_value().length;
   var _newTextCheck = professions[nextProfessionIndex].substr(0,_currentLen-2);
@@ -93,9 +93,3 @@ function erase_profession_text() {
   set_text_value(get_text_value().slice(0, -1));
   text_type_timeout = setTimeout(erase_profession_text, 50);
 }
-// // start the scrolling text when the page is fully loaded
-// if (window.addEventListener) {
-//   window.addEventListener('load', type_out_profession, false);
-// } else if (window.attachEvent) { // IE 6-10 support
-//   window.attachEvent('onload', type_out_profession);
-// }
