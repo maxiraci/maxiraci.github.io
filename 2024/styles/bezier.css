@@ -1,0 +1,48 @@
+
+.lerped {
+    --t: calc((var(--scroll-val) - var(--start-scroll)) / (var(--end-scroll) - var(--start-scroll)));
+    left: clamp(var(--x1), ((1 - var(--t)) * var(--x1)) + (var(--t) * var(--x2)), var(--x2));
+    top:  clamp(var(--y1), ((1 - var(--t)) * var(--y1)) + (var(--t) * var(--y2)), var(--y2));
+}
+
+/* 
+    inputs: --x1, --x2, --x3, --y1, --y2, --y3, --start-scroll, --end-scroll
+*/
+.quadbezier {
+    --t: clamp(0, (var(--scroll-val) - var(--start-scroll)) / (var(--end-scroll) - var(--start-scroll)), 1);
+    --int: calc(1 - var(--t));
+
+    --p1x: calc((var(--int) * var(--x1)) + (var(--t) * var(--x2)));
+    --p1y: calc((var(--int) * var(--y1)) + (var(--t) * var(--y2)));
+    --p2x: calc((var(--int) * var(--x2)) + (var(--t) * var(--x3)));
+    --p2y: calc((var(--int) * var(--y2)) + (var(--t) * var(--y3)));
+
+    left: calc((var(--int) * var(--p1x)) + (var(--t) * var(--p2x)));
+    top:  calc((var(--int) * var(--p1y)) + (var(--t) * var(--p2y)));
+}
+
+#sparkle-jail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.sparkle {
+    pointer-events: none;
+    position: absolute;
+    --x1: 0px;
+    --y1: 0px;
+    --start-scroll: 0;
+    --end-scroll: 128;
+
+    opacity: calc(var(--t) * 100%);
+    font-size: calc(var(--t) * 32px);
+}
+
+/* .sparkle:nth-child(1) { --x2: -200px; --x3: -500px; }
+.sparkle:nth-child(2) { --x2: 200px;  --x3:  500px; }
+.sparkle:nth-child(3) { --x2: -300px; --x3: -600px; } */

@@ -1,0 +1,214 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section, address {
+    scroll-margin-top: calc(var(--header-inner-height) + 16px);
+}
+
+body {
+    background-color: var(--color-bg-0);
+}
+
+#main-index {
+    position: relative;
+    z-index: 1;
+    max-width:1400px;
+    margin:auto;
+    margin-top: 50px;
+    padding: 8px;
+    box-shadow: 4px 4px 10px black;
+}
+
+.central-focus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+}
+
+#bg {
+    pointer-events: none;
+    content:"";
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 100%;
+
+    /* z-index: -1; */
+
+    background: url(data:image/webp;base64,UklGRjAAAABXRUJQVlA4TCQAAAAvA8AAAIVS27ahb3uzOUmSJoqqrOq6P47of8DQdcprYdP8/VY=);
+    filter: contrast(3);
+    image-rendering: pixelated;
+    background-size: 16px;
+    
+    mask: linear-gradient(to bottom, transparent, black 100%);
+}
+
+#bg2 {
+    background: var(--index-bg);
+}
+
+#bg3 {
+    background: var(--index-bg2);
+}
+
+#bg-mouse {
+    display: none;
+    /* background: radial-gradient(circle at 32px 512px, #2e5cbe 32px, transparent 80%); */
+}
+
+#skills {
+    min-height: 400px;
+    display: grid;
+    align-content: flex-start;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 2em) auto; 
+
+    & header {
+        grid-column: 1;
+        max-height:fit-content;
+
+        & h1 {
+            margin: 0;
+        }
+    }
+
+    & section {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+#skills-list {
+    list-style-type: none;
+    padding-left: 1em;
+
+    & details {
+        & summary {
+            transition-duration: 300ms;
+            cursor: pointer;
+        }
+
+        &[open] summary {
+            background: linear-gradient(to right, transparent 60%, var(--color-accent-2));
+            border-bottom: 1px solid gray;
+            transition-duration: 300ms;
+        }
+    }
+}
+
+#elmo-twitter:hover {
+    animation: shake cubic-bezier(0, 1, 1, 0) 1s infinite;
+
+    &::before {
+        animation: swap-icon cubic-bezier(0, 1, 1, 0) 2s infinite;
+    }
+}
+
+@keyframes swap-icon {
+    0%   { content: "\e61a"; }
+    45%  { content: "\f081"; }
+    85%   { content: "\e61a"; }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(5deg); }
+    40% { transform: translate(0px, 0px) rotate(-5deg); }
+    50% { transform: translate(0px, 0px) rotate(0deg); }
+    60% { transform: translate(0px, 0px) rotate(0deg); }
+    70% { transform: translate(0px, 0px) rotate(0deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#contact-list {
+    & p {
+        margin: 0;
+    }
+    & ul {
+        margin: 0;
+        display: flex;
+        gap: 6px;
+        list-style-type: none;
+    }
+
+    & a {
+        font-size: 40px;
+    }
+}
+
+#fun-physics-sim {
+    /* background-color: gray;  */
+    height:fit-content;
+    display: none;
+    grid-row: 1 / span 2;
+    grid-row-start: 1;
+    grid-column: 2;
+    box-shadow: 2px 2px 5px black;
+    position: relative;
+
+    border-radius: 6px;
+    overflow: hidden;
+
+    background-color: var(--color-bg-2);
+
+    & p {
+        margin: 0;
+    }
+
+    & canvas {
+        overflow: scroll;
+    }
+}
+
+#sim-element {
+    line-height: 0;
+
+    &::before {
+        position: absolute;
+        bottom: 2em;
+        left: 1em;
+        content: "\f047";
+        color: white;
+        font: var(--fa-font-solid);
+        /* text-shadow: 0px 0px 12px black; */
+        display: block;
+        background: rgba(0,0,0,0.4);
+        padding:4px;
+        border-radius: 4px;
+        pointer-events: none;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #fun-physics-sim {
+        display: block;
+    }
+}
+
+/* only do hover actions on devices that actually let you hover */
+@media (pointer: fine) {
+    #bg-mouse {
+        display: block;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    #bg-mouse {
+        display: none !important;
+    }
+
+    #elmo-twitter:hover {
+        animation: none;
+    
+        &::before {
+            animation: none;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/97d927f12c.js" crossorigin="anonymous"></script>
+
+        <!-- dark theme compat -->
+        <script src="../scripts/dark_theme.js" defer></script>
+
+        <script src="../scripts/projects/projects_iframe.js" defer></script>
+
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/projects.css">
+        
+        <title>vis (audio visualiser) | Max Iraci-Sareri</title>
+    </head>
+    <body>
+        <header id="site-header">      
+            <a href="../index.html">
+                <h1>Max Iraci-Sareri</h1>
+                <p>Software Engineer</p>
+            </a>
+        </header>
+        <div id="bg">
+            <div style="mix-blend-mode: soft-light; background: white; isolation: isolate;">
+                <div id="bg2"></div>
+                <div id="bg3"></div>
+            </div>
+        </div>
+        <main>
+            <article>
+                <header>
+                    <div class="content">
+                        <h1>vis (audio visualiser)</h1>
+                        <p role="doc-subtitle">Easy Python-based FFmpeg wrapper for audio visualisation</p>
+                        <p>
+                            <cite>vis</cite> is a visualiser created to allow users to upload audio files as videos where embedded audio is not normally supported. 
+                            <br />
+                            As an example, despite Discord featuring support for embedded audio files on their PC and web platforms for years, it seems they are apathetic about adding
+                            mobile support for it, which means most audio can't be played on mobile without downloading the file. 
+                            <br />
+                            Using <cite>vis</cite> means it plays as a video file instead, which Discord natively supports on all platforms. 
+                        </p>
+                        <p>
+                            A basic visualiser would have worked fine, but had a couple of limitations. Videos of the wrong aspect ratios would suffer when online video players would
+                            overlay their video play bar on top; it could also become complicated to use some vertical volume bars. 
+                            Various visualisation methods would also encode into a format that didn't work on specific devices; iPhones use a different format encoding of h264 to Android and PC.
+                        </p>
+                    </div>
+                    <figure class="image-content">
+                        <video controls loop>
+                            <source src="../images/projects/vis/website_theme.mp4" type="video/mp4" />
+                        </video>
+                        <figcaption>Example of vis in action (featuring a track I made for this page!)</figcaption>
+                    </figure>
+                </header>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Features</h2>
+                        </header>
+                        <p>
+                        </p>
+                        <ul>
+                            <li>Generates video files designed to be shared in online settings, for example Discord or Twitter/X, which don't support audio embeds in all situations</li>
+                            <li>Timecode field is raised slightly to allow for the play bar that most online video players use</li>
+                            <li>Supports custom author/title fields, plus custom output destination</li>
+                            <li>Dynamic moving background</li>
+                            <li>Available from the CLI with parameters; similar to FFmpeg itself but makes it easier to work with its advanced options and parameters. </li>
+                        </ul>
+                    </div>
+                    <aside>
+                        <figure>
+                            <img src="../images/projects/vis/vis_subprocess.png">
+                            <figcaption>
+                                The main functionality of <cite>vis</cite> is a wrapper for <a href="https://www.ffmpeg.org/" target="_blank">FFmpeg</a>, a powerful open-source
+                                media encoding tool. FFmpeg handles the work, but the complicated part is the parameters to
+                                generate the text and the grid behind it, as it is generated at runtime.
+                            </figcaption>
+                        </figure>
+                    </aside>
+                </section>
+            </article>
+        </main>
+        <footer id="site-footer">
+            <p>Site design by me. <a href="./projects#portfolio-site">I made this.</a></p>
+            <p>with fonts by <a href="https://github.com/pixeldroid/fonts">pixeldroid</a></p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/97d927f12c.js" crossorigin="anonymous"></script>
+
+        <!-- dark theme compat -->
+        <script src="../scripts/dark_theme.js" defer></script>
+
+        <script src="../scripts/projects/projects_iframe.js" defer></script>
+
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/projects.css">
+        
+        <title>clocking out! | Max Iraci-Sareri</title>
+    </head>
+    <body>
+        <header id="site-header">      
+            <a href="../index.html">
+                <h1>Max Iraci-Sareri</h1>
+                <p>Software Engineer</p>
+            </a>
+        </header>
+        <div id="bg">
+            <div style="mix-blend-mode: soft-light; background: white; isolation: isolate;">
+                <div id="bg2"></div>
+                <div id="bg3"></div>
+            </div>
+        </div>
+        <main>
+            <article>
+                <header>
+                    <div class="content">
+                        <h1>clocking out!</h1>
+                        <p role="doc-subtitle">Clock-based Combat, for Ludum Dare 51</p>
+                        <p>
+                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
+                            Design your buffs and debuffs respectively to ensure you play the best!</p>
+                    </div>
+                    <figure class="image-content">
+                        <img src="../images/projects/clocking_out/clocking_out.png" alt="Gameplay of 'clocking out!'">
+                        <figcaption>Gameplay of 'clocking out!'</figcaption> 
+                    </figure>
+                </header>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Gameplay</h2>
+                        </header>
+                        <p>
+                            Before players get to start playing, they have to pick their benefit "cycle" - what benefits and drawbacks they would get every 10 seconds.
+                            To start, you had to pick all six from each group - all you could decide was the order to have them apply in, which means you'd have to decide
+                            what benefit would outweigh the mandatory drawback you would have for that time. As an example, I saw a lot of players pair the "double damage" 
+                            or "double firing speed" benefit with the "cannot move" drawback, as it let them keep enemies off them while they weren't allowed to move.
+                        </p>
+                        <p>
+                            The game progresses through three levels of increasing complexity in both level design and enemy design.
+                            At first the player fights small waves of unarmed gears that slowly move towards them, making it relatively easy to fight them,
+                            but by the final level the arena turns much more hostile as the enemies have fast-firing deadly projectile weapons.
+                            I liked the change in gameplay style this invoked in playtesters as they shifted from guns-blazing running at and around enemies
+                            to taking cover and rolling out of the way of danger to get a quick shot in before the enemies could do the same.
+                        </p>
+                    </div>
+                    <aside>
+                        <figure>
+                            <img src="../images/projects/clocking_out/clocking_out_prep.png">
+                            <figcaption>The "Preparation" screen</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Development</h2>
+                        </header>
+                        <p>
+                            This was my first attempt at using Godot, and I used the experience to learn how Godot's node structure and functionality worked.
+                            I started small with a minimal gameplay loop, as most game jams go: making the character move, making the gun work, adding enemies, then adding a loop of spawning enemies.
+                        </p>
+                        <p>
+                            The unique mechanic of the game (cycling the benefits and drawbacks every 10 seconds) was relatively easy to implement, although coming up with fun drawbacks was difficult
+                            (honestly I'm not sure I nailed it - the "cannot move" drawback really sucks to play with, so I have changed it in development versions to a -90% movement speed debuff instead.)
+                        </p>
+                    </div>
+                    <aside>                        
+                        <figure>
+                            <img src="../images/projects/clocking_out/dev_screenshot.png">
+                            <figcaption>Development screenshot</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Limitations</h2>
+                        </header>
+                        <p>
+                            I chose to use Godot 4 at the time because the numerous improvements over Godot 3 interested me enough to give it a shot. 
+                            Unfortunately the jam was held at a time where Godot 4.0 was still very much in the beta cycle; this led to my game having a 
+                            lot of visual glitches and crashes that I couldn't fix without a lot more time than the 72 hours I had.  
+                        </p>
+                        <p>
+                            The in-development gameplay video shown displays some other issues I had - I had to remove dynamic shadows because they were causing crashes.
+                            It was unfortunate because it made the game look a lot better.
+                        </p>
+                    </div>
+                    <aside>
+                        <figure>
+                            <video controls>
+                                <source src="../images/projects/clocking_out/gameplay_indev.mp4" type="video/mp4" />
+                            </video>
+                            <figcaption>Gameplay (in dev)</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+            </article>
+        </main>
+        <footer id="site-footer">
+            <p>Site design by me. <a href="./projects#portfolio-site">I made this.</a></p>
+            <p>with fonts by <a href="https://github.com/pixeldroid/fonts">pixeldroid</a></p>
+        </footer>
+    </body>
+</html>
