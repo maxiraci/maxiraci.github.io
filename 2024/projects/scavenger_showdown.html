@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/projects.css">
         
-        <title>clocking out! | Max Iraci-Sareri</title>
+        <title>Scavenger Showdown | Max Iraci-Sareri</title>
     </head>
     <body>
         <header id="site-header">      
@@ -34,13 +34,20 @@
             <article>
                 <header>
                     <div class="content">
-                        <h1>clocking out!</h1>
-                        <p role="doc-subtitle">Subtitle</p>
-                        <p>description</p>
+                        <h1>Scavenger Showdown</h1>
+                        <p role="doc-subtitle">Combat scavenger hunt, for the 2021 Global Game Jam</p>
+                        <p>
+                            Scavenger Showdown is a competitive scavenger hunt game designed for 1-4 players. To win, players must find all the items scattered around the map before everyone else.
+                            The game can be played in single-player to go for a record time.
+                        </p>
+                        <p>
+                            I created Scavenger Showdown with three others as part of the 2021 <a href="https://globalgamejam.org/" target="_blank">Global Game Jam</a>.
+                            The theme for the 2021 GGJ was "Lost and Found". 
+                        </p>
                     </div>
                     <figure class="image-content">
-                        <img src="../images/projects/clocking_out/clocking_out.png" alt="Gameplay of 'clocking out!'">
-                        <figcaption>Gameplay of 'clocking out!'</figcaption> 
+                        <img src="../images/projects/scavenger_showdown/scavshow_gameplay.jpg" alt="Gameplay of 'clocking out!'">
+                        <figcaption>Gameplay of 'Scavenger Showdown'</figcaption> 
                     </figure>
                 </header>
                 <section>
@@ -49,25 +56,20 @@
                             <h2>Gameplay</h2>
                         </header>
                         <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
+                            The gameplay of Scavenger Showdown involves finding all 13 items scattered around the map in a random order. 
+                            All players must find all 13 items, but the order everyone gets is randomised.
                         </p>
                         <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
+                            Similarly, all objects' positions are placed randomly from a pool of locations, meaning players cannot just memorise the locations.
                         </p>
                         <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
+                            Players also have swords, which they can use in multiplayer to attack others. Each player has three hearts 
+                            - if a player loses all their hearts they sit out for 10 seconds and then respawn at the beginning of the stage (while keeping the progress they have). 
                         </p>
-                        <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
-                        </p>
-                    </div>
+                    </div> 
                     <aside>
                         <figure>
-                            <img src="../images/projects/clocking_out/clocking_out_prep.png">
+                            <img src="../images/projects/scavenger_showdown/scavshow_map.png">
                             <figcaption>The "Preparation" screen</figcaption>
                         </figure>
                     </aside>
@@ -78,30 +80,50 @@
                             <h2>Development</h2>
                         </header>
                         <p>
-                            (todo: write)
+                            Because of the limited time, I decided against making my own graphics for the game. Instead, I utilised a variety of asset packs, including:
+                            <ul>
+                                <li><a href="https://kaylousberg.itch.io/kaykit-dungeon" target="_blank">KayKit - Dungeon Pack</a></li>
+                                <li><a href="https://kaylousberg.itch.io/kay-kit-mini-game-variety-pack" target="_blank">KayKit - Minigame Variety Pack</a></li>
+                                <li><a href="https://www.kenney.nl/assets/castle-kit" target="_blank">Kenney's "Castle Kit"</a></li>
+                                <li><a href="https://kenney.nl/assets/1-bit-pack" target="_blank">Kenney's "1-Bit Pack"</a></li>
+                            </ul> 
                         </p>
                     </div>
                     <aside>                        
                         <figure>
-                            <video controls>
-                                <source src="../images/projects/clocking_out/gameplay_indev.mp4" type="video/mp4" />
-                            </video>
-                            <figcaption>Gameplay (in dev)</figcaption>
+                            <img src="../images/projects/scavenger_showdown/scavshow_graphics.png">
+                            <figcaption>The graphics are quite simple, but serve the basic concept.</figcaption>
                         </figure>
                     </aside>
                 </section>
                 <section>
                     <div class="content">
                         <header>
-                            <h2>Limitations</h2>
+                            <h2>Retrospective</h2>
                         </header>
                         <p>
-                            (to write. lol.) Godot 4 was only just coming out!
+                            The limitations of the jam format plus working semi-sporadically with three other people meant Scavenger Showdown ended up rather lackluster.
                         </p>
                         <p>
-                            I had to remove dynamic shadows because they were causing crashes
+                            The random generation of the order of finding objects means players' luck completely determines their success. 
+                            Some generations could lead to the collection order ping-ponging in location across the map, and others could put them in close proximity. 
+                            In the end, this was the biggest factor to its general mediocre feel.
+                        </p>
+                        <p>
+                            The map routing is rather fun, but a lot of the general routes aren't very useful in the end.
+                            since the positions of the objects are randomised, you can't even strategically remember the objects' locations before you go anywhere, 
+                            instead having to look around haphazardly at the start and just hope you find one of your items soon.
+                            As such, despite me putting in various movement options to get around the map quickly, a lot of the gameplay relies on just wandering around and hoping
+                            you remember where everything is while looking around and fending off opponents.
                         </p>
                     </div>
+                    <aside>                        
+                        <figure>
+                            <img src="../images/projects/scavenger_showdown/scavshow_ident.png" 
+                                alt="Picture of Scavenger Showdown gameplay. The player is standing next to a collectable 'chest' item which shows its name above it for identification.">
+                            <figcaption>Moving up to a collectable item shows you its name in case you need help identifying them.</figcaption>
+                        </figure>
+                    </aside>
                 </section>
             </article>
         </main>

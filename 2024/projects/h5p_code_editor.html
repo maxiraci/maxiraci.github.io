@@ -36,39 +36,67 @@
                     <div class="content">
                         <h1>Code Editor for H5P</h1>
                         <p role="doc-subtitle"></p>
-                        <p>description</p>
+                        <p>
+                            <a target="_blank" href="https://h5p.org/">H5P</a> is a project designed to create and facilitate modular interactive HTML5 browser content. 
+                            This content can then be used and reused in content management systems (CMS) for a variety of reasons, including educational.
+                        </p>
+                        <p>
+                            I created a code editor module for H5P in 2021 as part of a university project. 
+                            The editor itself was not written from scratch by me - I adapted the open-source <a target="_blank" href="https://codemirror.net/3/">CodeMirror</a> framework,
+                            since it was the best for the use case I had and permissible enough in its license for the project.
+                        </p>
                     </div>
                     <figure class="image-content">
-                        <img src="../images/projects/h5p_code_editor/code_editor_final.png" alt="Gameplay of 'clocking out!'">
-                        <figcaption>Gameplay of 'clocking out!'</figcaption> 
+                        <img src="../images/projects/h5p_code_editor/code_editor_final.png" alt="The H5P code editor in action">
+                        <figcaption>The code editor in action. Various configuration options are presented to the user.</figcaption> 
                     </figure>
                 </header>
                 <section>
                     <div class="content">
                         <header>
-                            <h2>Gameplay</h2>
+                            <h2>Academic Paper</h2>
                         </header>
                         <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
+                            As part of the university project that resulted in this editor, I wrote an academic paper describing 
+                            the process of its creation, from initial designs to testing and rapid iteration.
+                            I went into detail about researching online web-based open-source code editors. Many out there exist, including (todo:),
+                            but CodeMirror worked the best for the project.
                         </p>
                         <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
+                            
                         </p>
                         <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
-                        </p>
-                        <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
+                            You can find a link to the paper <a href="../papers/H5P - Code Editor.pdf" target="_blank">here.</a>
                         </p>
                     </div>
                     <aside>
                         <figure>
-                            <img src="../images/projects/clocking_out/clocking_out_prep.png">
-                            <figcaption>The "Preparation" screen</figcaption>
+                            <img src="../images/projects/h5p_code_editor/proof_of_concept.png">
+                            <figcaption>The proof-of-concept version I made using barebones styling.</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Development</h2>
+                        </header>
+                        <p>
+                            I utilised various technologies in order to test the H5P editor in a mock environment during testing.
+                            I spun up a CMS of my own for development: an instance of Drupal via Docker. 
+                            This environment helped me find bugs before committing any code to the project repository, since it made
+                            any errors more reproducible at runtime and didn't lead to unexpected variances.
+                        </p>
+                        <p>
+                            The fundamentals of an H5P module come down to a bundle of minified JavaScript and HTML utilising JQuery
+                            for event handling and setup. Configuring the module itself also involved changing a bunch of JSON 
+                            configuration files to determine what options would display on the module to the user (e.g. indent and programming language) 
+                        </p>
+                    </div>
+                    <aside>
+                        <figure>
+                            <img src="../images/projects/h5p_code_editor/library_json.png">
+                            <figcaption>The library configuration, in the form of a JSON file.</figcaption>
                         </figure>
                     </aside>
                 </section>

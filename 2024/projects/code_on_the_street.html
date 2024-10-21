@@ -35,31 +35,81 @@
                 <header>
                     <div class="content">
                         <h1>Code on the Street</h1>
-                        <p role="doc-subtitle">Subtitle</p>
-                        <p>description</p>
+                        <p role="doc-subtitle">Programming languages compared based on Stack Overflow presence</p>
+                        <p>
+                            "Code on the Street" is a full-stack software project designed to compare programming languages based on their
+                            presence on Stack Overflow. It uses metrics such as upvote count, percentage of answered questions, and site presence
+                            to give a score to each language.
+                        </p>
+                        <p>
+                            To create this project, I used the pandas and StackAPI Python modules for querying and processing data, 
+                            the Flask Python module to spin up a web back-end, and the c3.js frontend library to render charts. 
+                        </p>
+                        <p>
+                            The project is not designed to gauge <em>objectively</em> which programming language is best, 
+                            but I completely endorse using this tool as evidence in the never-ending debate everyone has about which language to use.
+                        </p>
                     </div>
                     <figure class="image-content">
-                        <img src="../images/projects/code_on_the_street/python_2x.png" alt="Gameplay of 'clocking out!'">
-                        <figcaption>Gameplay of 'clocking out!'</figcaption> 
+                        <img src="../images/projects/code_on_the_street/python_2x.png" alt="Statistics shown for a specific tag (in this case the tag 'python-2x')">
+                        <figcaption>Statistics shown for a specific tag (in this case the tag <code>python-2.x</code>)</figcaption> 
                     </figure>
                 </header>
-                <!-- <section>
+                <section>
                     <div class="content">
                         <header>
-                            <h2>Gameplay</h2>
+                            <h2>Data</h2>
                         </header>
                         <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
+                            The backend code queried the Stack Overflow API for up to 300 random posts at a time with the queried tag.
+                            When returned, this data would contain a variety of information about the post.
+                            This included post title and body content, the score of the question (upvotes and downvotes), 
+                            and all the other tags associated with the post (which helps determine common tags used alongside the queried one).
+                        </p>
+                        <p>
+                            The Stack Overflow API has pretty strict rate limits when querying this much data. 
+                            To avoid querying the API where possible, I preloaded the top 5000 questions from the top 10 most popular tags on StackOverflow.
+                            This helped keep response times low when querying about these languages.     
                         </p>
                     </div>
                     <aside>
                         <figure>
-                            <img src="../images/projects/clocking_out/clocking_out_prep.png">
-                            <figcaption>The "Preparation" screen</figcaption>
+                            <img src="../images/projects/code_on_the_street/search_menu.png">
+                            <figcaption>The search menu. Users can input one tag to see statistics, or two for comparison.</figcaption>
                         </figure>
                     </aside>
-                </section> -->
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Calculations</h2>
+                        </header>
+                        <p>
+                            Half of the score for a tag comes from the ratio of answered to unanswered questions with that tag;
+                            after all, that's what Stack Overflow is all about. I figured putting that info front and center would be a good indication,
+                            but it also means tags with fewer questions end up getting an inherent advantage because it's easier to get a higher percentage. 
+                        </p>
+                        <p>
+                            The inclusion of "code examples" as a scoring metric was because I figured it made for better questions. 
+                            Questions with examples of what the asker is intending to do are considered better practise in Stack Overflow.
+                            That being said, I understand some tags would not use code as often (e.g. codeless languages, cloud services),
+                            so I only made it count for 1 mark out of 10.
+                        </p>
+                        <p>
+                            I added the "Site Presence" score metric based on how common the tag is. This has some benefits and drawbacks.
+                            Generally, a question that has more presence will be answered more readily, whether or not the answer is marked as such.
+                            However, languages that have less data (i.e. less common on Stack Overflow) shouldn't necessarily be immediately and harshly marked down,
+                            as they could just be new or not commonly used in favour of other tags (e.g. <code>python2.x</code> is used less than <code>python</code>).
+                            I similarly opted to just have it count for only 1 mark out of 10 for the final score.   
+                        </p>
+                    </div>
+                    <aside>
+                        <figure>
+                            <img src="../images/projects/code_on_the_street/score_calculation.png">
+                            <figcaption>The score calculation (in this case for the tag <code>javascript</code>).</figcaption>
+                        </figure>
+                    </aside>
+                </section>
             </article>
         </main>
         <footer id="site-footer">

@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/projects.css">
         
-        <title>clocking out! | Max Iraci-Sareri</title>
+        <title>Full-Stack Task Management Project | Max Iraci-Sareri</title>
     </head>
     <body>
         <header id="site-header">      
@@ -34,74 +34,79 @@
             <article>
                 <header>
                     <div class="content">
-                        <h1>clocking out!</h1>
-                        <p role="doc-subtitle">Subtitle</p>
-                        <p>description</p>
+                        <h1>Full-Stack Task Management Project</h1>
+                        <p role="doc-subtitle">Task management and organisation, made quick and simple</p>
+                        <p>
+                            As part of a university assignment I drafted and created a website designed to help with workforce coordination and task management.
+                            I also created a backend server for the website using Node.js and Express which stored and processed the data using an SQL database.
+                        </p>
+                        <p>
+                            While most of the actual site content remains placeholder, the project itself was useful for me as my first foray into full-stack web development.
+                        </p>
                     </div>
                     <figure class="image-content">
-                        <img src="../images/projects/clocking_out/clocking_out.png" alt="Gameplay of 'clocking out!'">
-                        <figcaption>Gameplay of 'clocking out!'</figcaption> 
+                        <img src="../images/projects/full_stack_site/task_page.png" alt="Gameplay of 'clocking out!'">
+                        <figcaption>The task management page allows users to create and assign tasks to users.</figcaption> 
                     </figure>
                 </header>
                 <section>
                     <div class="content">
                         <header>
-                            <h2>Gameplay</h2>
+                            <h2>Features</h2>
                         </header>
                         <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
-                        </p>
-                        <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
-                        </p>
-                        <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
-                        </p>
-                        <p>
-                            Every 10 seconds in this top-down shooter, you'll get one positive and one negative effect from a cycle that you choose beforehand. 
-                            Design your buffs and debuffs respectively to ensure you play the best!
+                            I experimented with a variety of features while working on this task management site, including:
+                            <ul>
+                                <li>logins (using both site-based login and an OAuth2 "Sign in with Google" button)</li>
+                                <li>task creation, management, and assigning</li>
+                                <li>user-facing availability assignment</li>
+                                <li>customisable profiles, with the ability for users to change their own profile picture</li>
+                                <li>dark theme, with a clientside toggle</li>
+                            </ul>
                         </p>
                     </div>
                     <aside>
                         <figure>
-                            <img src="../images/projects/clocking_out/clocking_out_prep.png">
-                            <figcaption>The "Preparation" screen</figcaption>
+                            <img src="../images/projects/full_stack_site/login_modal.png">
+                            <figcaption>The "Log In" modal can appear over any page on the site.</figcaption>
                         </figure>
                     </aside>
                 </section>
                 <section>
                     <div class="content">
                         <header>
-                            <h2>Development</h2>
+                            <h2>Availabilities</h2>
                         </header>
                         <p>
-                            (todo: write)
+                            The system was designed first and foremost to be able to allow people to find out who is available to work on what at a specific time.
+                            To that end, users were able to add availabilities to their account which would determine when they could work on something.
+                            This system was primitive in its initial implementation; if I were to return to this I'd definitely add a way to make an availability repeatable.
+                        </p>
+                        <p>
+                            When assigning a task, a user's availabilities would display to show whether they had the time to work on it. If unavailable or already assigned a task during this time,
+                            the user's icon would be grayed out.   
                         </p>
                     </div>
                     <aside>                        
                         <figure>
-                            <video controls>
-                                <source src="../images/projects/clocking_out/gameplay_indev.mp4" type="video/mp4" />
-                            </video>
-                            <figcaption>Gameplay (in dev)</figcaption>
+                            <img src="../images/projects/full_stack_site/availabilities.png">
+                            <figcaption>Users could add availabilies from a specific section on the site, one at a time.</figcaption>
                         </figure>
                     </aside>
                 </section>
                 <section>
-                    <div class="content">
-                        <header>
-                            <h2>Limitations</h2>
-                        </header>
-                        <p>
-                            (to write. lol.) Godot 4 was only just coming out!
-                        </p>
-                        <p>
-                            I had to remove dynamic shadows because they were causing crashes
-                        </p>
-                    </div>
+                    <aside>                        
+                        <figure>
+                            <img src="../images/projects/full_stack_site/site_darkmode.png">
+                            <figcaption>Initial design of the task management page.</figcaption>
+                        </figure>
+                    </aside>
+                    <aside>                        
+                        <figure>
+                            <img src="../images/projects/full_stack_site/site_profile.png">
+                            <figcaption>Initial design of the profile page.</figcaption>
+                        </figure>
+                    </aside>
                 </section>
             </article>
         </main>

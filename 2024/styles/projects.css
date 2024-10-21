@@ -15,6 +15,12 @@ main {
     overflow: hidden;
 }
 
+a[target="_blank"]::after {
+    content: "\f35d";
+    margin-left: 0.5ch;
+    font: var(--fa-font-solid);
+}
+
 header h1, header img {
     margin-top: 0;
     max-width: 100%;
@@ -74,8 +80,11 @@ figure {
 
     & img, & video, & iframe {
         width: 100%;
+        /* max-width: 100%; */
         aspect-ratio: 16/9 auto;
         border-radius: 4px;
+        /* max-height: 350px;
+        height: auto; */
     }
 } 
 

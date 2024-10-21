@@ -67,7 +67,7 @@ let projects = [
     new Project("stack-overflow-post-improver", "Stack Overflow Post Improver", "2020",
         "Academic project about developing a natural-language machine-learning model to improve Stack Overflow posts based on existing edits.",
         "./images/projects/stack_overflow_post_improver/changes_and_warnings.png",
-        "../projects/stack_overflow_post_improver.html",
+        "./projects/stack_overflow_post_improver.html",
         {
             "fa-solid fa-file-pdf": "./papers/Automatically improving natural language in software documentation using Stack Overflow edits.pdf"
         }, ["backend-dev", "frontend-dev", "machine-learning"]
@@ -105,7 +105,7 @@ let projects = [
     ),
     new Project("portfolio-site", "This Portfolio Site", "2024",
         "I made this site fully myself! It's accessible, responsive, and feature-rich.",
-        "./images/projects/portfolio_site/portfolio_site_static.png",
+        "./images/projects/portfolio_site/portfolio_site_2024.png",
         "./projects/portfolio_site.html", {}, ["frontend-dev"]
     ),
     // new Project("games", "Game Projects", "2024",

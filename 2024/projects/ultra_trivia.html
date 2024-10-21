@@ -40,7 +40,9 @@
                             Ultra Trivia is a simple Discord trivia bot written in Python made to run interactive trivia games out of a single Discord channel.
                         </p>
                         <p>
-                            original intent
+                            I adapted the idea of Ultra Trivia from watching a YouTube trivia game similar to it played entirely in one Discord text channel (with voice alongside to explain rules and read questions).
+                            It was a great format, but took a long time to run and manage, and everyone's answers were public (although the intent was to share answers all at once).
+                            I wanted to try this sort of game out myself but see what sort of improvements could be made to the format in the process. 
                         </p>
                         <p>
                             
@@ -54,16 +56,37 @@
                 <section>
                     <div class="content">
                         <header>
-                            <h2>Interface</h2>
+                            <h2>Running the Game</h2>
                         </header>
                         <p>
-                            slash commands
+                            A game of Ultra Trivia needs a "quiz-master" to run it - one person who sets up each question and reveals answers.
+                            To do this, the bot provides a variety of slash-commands for expected functionality.
+                            Setting up a question requires having a document of questions in a pre-defined format to copy-paste directly into the bot's question form; 
+                            this makes initial setup slightly challenging but allows for modular "question sheets" to be created.  
                         </p>
                         <p>
-                            question form
+                            Once the question is posted to the chat by the Ultra Trivia bot, buttons are embedded alongside the message so that each player can provide their own answer.
+                            These answers are kept hidden until the answer is revealed (or if the quiz-master wants to show what everyone guessed before the correct answer is shown).
+                            The capability to use buttons in this manner was one of the reasons I created the Ultra Trivia bot: to see what modern capabilities bots had.   
                         </p>
+                    </div>
+                    <aside>
+                        <figure>
+                            <img src="../images/projects/ultra_trivia/answered_question.png">
+                            <figcaption>The "Preparation" screen</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Future Ideas</h2>
+                        </header>
                         <p>
-                            buttons to answer
+                            Discord has definitely been busy adding features since I finished the Ultra Trivia bot enough to do my first tests.
+                            Since 2022, Discord has introduced "activities" - multiplayer games built directly into the app designed to be played solo or with friends.
+                            The Discord Activity API is public now, and any developer can create and run their own activities using it, albeit only in small servers unless approved.
+                            This is a great incentive to see how much <em>more</em> I can expand Ultra Trivia's automation. If possible, I could streamline it all, so no quiz master is required!
                         </p>
                     </div>
                     <aside>
