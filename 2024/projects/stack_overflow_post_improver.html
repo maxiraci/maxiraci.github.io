@@ -36,13 +36,92 @@
                     <div class="content">
                         <h1>Stack Overflow Post Improver</h1>
                         <p role="doc-subtitle">Machine-learning project designed to help make better Stack Overflow posts</p>
-                        <p>[Page under construction!]</p>
+                        <p>
+                            The popular documentation question-and-answer site Stack Overflow helps developers get quick answers to common programming questions.
+                            They are often very useful but vary in quality, especially with more niche languages or tags. <br />
+                            
+                            However, posts on Stack Overflow are publicly editable, with users optionally providing descriptive edit messages.
+                            These edits could in theory be used to discover common pitfalls in questions and potentially automatically fix them.
+                        </p><p>
+                            To improve existing future Stack Overflow posts, I developed a prototype model to improve basic post readability using the dataset <a href="https://arxiv.org/abs/2004.08193" target="_blank">An Annotated Dataset of Stack Overflow Post Edits</a>.<br />
+                            This was achieved primarily through use of natural language processing and machine learning, alongside trivial readability improvements. 
+                            The resulting program can fix trivial issues such as sentence casing and formatting, and also warns users when often-redundant information is added to posts or documentation.
+                        </p>
                     </div>
                     <figure class="image-content">
                         <img src="../images/projects/stack_overflow_post_improver/changes_and_warnings.png" alt="Demonstration of the post improver">
                         <figcaption>Demonstration of the post improver</figcaption> 
                     </figure>
                 </header>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Data</h2>
+                        </header>
+                        <p>
+                            The data was obtained from a prior project aimed to annotate a set of Stack Overflow post edits 
+                            by what exact changes were mentioned. Each entry in the dataset included the content "diff" alongside the comment the editor left, which described what they did. 
+                        </p>
+                    </div> 
+                    <aside>
+                        <figure>
+                            <img src="../images/projects/stack_overflow_post_improver/csv_data.png" alt="A table of 'ngrams' and their removal rate">
+                            <figcaption>Review of existing edits to find limitations</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Research</h2>
+                        </header>
+                        <p>
+                            As part of research, I went over a subset of the edit data obtained 
+                            and checked to see what needed to be looked out for in terms of potential design ideas or issues.
+                            I went through each of the edits in this subset and checked to see what exactly was changed and whether it helped the final result.
+                            Nearly always, the result was positive (after all, that's the point of an edit!) but I checked to see how exactly it improved.
+                        </p>
+                        <p>
+                            I also categorised potentially negative edits that would confuse the machine-learning model; 
+                            mainly this came about in the form of hyper-specific or poor-quality edits that wouldn't work well to learn from.
+                        </p>
+                    </div> 
+                    <aside>
+                        <figure>
+                            <img src="../images/projects/stack_overflow_post_improver/edit_review.png" alt="A table of 'ngrams' and their removal rate">
+                            <figcaption>Review of existing edits to find limitations</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Functionality</h2>
+                        </header>
+                        <p>
+                            The actual program was split into two parts as a prototype: automatic code detection and common phrase removal.
+                        </p>
+                        <p>
+                            Posts on StackOverflow without properly formatted code examples are really hard to read properly, and often get changed to add code tags.
+                            I wanted to see how easy this process could be to automate. <br />
+                            The automatic code detection was trained on long strings of code of various languages, 
+                            alongside with long sections of other text seen on StackOverflow so the model could tell the difference.
+                            Once the model was trained, the idea was that it could add code tags (<code>```</code>) into any post.
+                        </p>
+                        <p>
+                            Many Stack Overflow edits are designed to simplify the question, 
+                            both for the sake of finding an answer but also for clarity for future viewers. 
+                            To this extent, I wanted to find out what the most common "edited out" phrases were, which I achieved using natural language processing.
+                            I used the python library <code>nltk</code> to identify phrases commonly used (ngrams) and marked them as sections "to remove" in the final program.
+                        </p>
+                    </div> 
+                    <aside>
+                        <figure>
+                            <img src="../images/projects/stack_overflow_post_improver/ngrams.png" alt="A table of 'ngrams' and their removal rate">
+                            <figcaption>Common phrases (ngrams) edited out of existing posts</figcaption>
+                        </figure>
+                    </aside>
+                </section>
             </article>
         </main>
         <footer id="site-footer">

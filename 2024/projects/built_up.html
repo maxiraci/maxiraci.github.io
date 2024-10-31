@@ -38,7 +38,7 @@
                             <h1>
                                 <img src="../images/projects/built_up/built-up-logo.png" alt="Built-Up! logo">
                             </h1>
-                            <p role="doc-subtitle">Subtitle</p>
+                            <p role="doc-subtitle">Unity SteamVR building game</p>
                         </div>
                         <p>
                             <cite>Built-Up! </cite> is a VR building game about creative construction and coffee-cup relocation. <br />
@@ -60,12 +60,61 @@
                             <h2>Gameplay</h2>
                         </header>
                         <p>
+                            Gameplay in Built-Up! involves knocking over coffee cups placed in increasingly complicated-to-reach positions.
+                            The way this is accomplished is with simple building blocks and physics-based connectors, from hinges to glue.
+                        </p>
+                    </div>
+                    <aside>                  
+                        <figure>
+                            <img src="../images/projects/built_up/cup_collider.png">
+                            <figcaption>One of the early missions. The collider surrounds the cups so you can't just walk up and knock them over.</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Building</h2>
+                        </header>
+                        <p>
+                            I created a hologram spawner which is used in-game to create the building materials. 
+                            Originally, the concept was that each player would have a pre-defined set of materials 
+                            (from a specific “toolkit” chosen before the game started) that they would use to accomplish the goals. 
+                            This feature was eventually scrapped due to two factors;
+                            it was hard to construct the sheer number of models required to have multiple sets of building materials, 
+                            and also primarily it wasn't very fun to play with a restricted building palette. 
+                        </p>
+                        <p>
+                            The “Object Spawner” is a good solution; it provides a central consistent spawn location for objects that allows players to create as many building materials as they want. 
+                        </p>
+                    </div>
+                    <aside>           
+                        <figure>
+                            <img src="../images/projects/built_up/hologram_spawner.jpg">
+                            <figcaption>The holographic "object spawner" players use to create building blocks. A variety of blocks are available.</figcaption>
+                        </figure>
+                    </aside>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <h2>Design</h2>
+                        </header>
+                        <p>
+                            The game concept was originally to require a player to support a number of paper coffee cups from falling onto the ground via construction of a coffee table. 
+                            This was eventually changed to knocking existing cups over because Unity's inbuilt physics doesn't really play nice with having weight constraints and forces.
+                        </p>
+                        <p>
+                            Given the two scenes I had to work with, I had to come up with interesting missions for each. 
+                            I ended up creating 9 missions in total; 4 for the “Living Room” scene and 5 for the “Courtyard” scene. 
+                            Each has a unique concept which challenges the player in different ways. 
+                            Admittedly, the earlier ones are rather easy; I created them just so the players can get a good feel for the game. 
                         </p>
                     </div>
                     <aside>
                         <figure>
                             <img src="../images/projects/built_up/courtyard_exterior.png">
-                            <figcaption>The figcaption</figcaption>
+                            <figcaption>One of the two settings - the outside pool area.</figcaption>
                         </figure>
                     </aside>
                 </section>
@@ -89,6 +138,36 @@
                         <iframe style="border: 0; width: 480px; height: 600px;" src="https://bandcamp.com/EmbeddedPlayer/album=3119100651/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
                             <a href="https://maxiraci.bandcamp.com/album/built-up-ost">Built Up! OST by Max Iraci-Sareri</a>
                         </iframe>
+                    </aside>
+                </section>
+                <section>
+                    <aside>                        
+                        <figure>
+                            <img src="../images/projects/built_up/built-up-courtyard.png">
+                            <figcaption>The mission selection board on the outside scene.</figcaption>
+                        </figure>
+                    </aside>
+                    <aside>                        
+                        <figure>
+                            <video loop autoplay muted>
+                                <source src="../images/projects/built_up/hologram_spawner_prototype.mp4" type="video/mp4"/>
+                            </video>
+                            <figcaption>First working prototype of the hologram object spawner.</figcaption>            
+                        </figure>
+                    </aside>
+                </section>                
+                <section>
+                    <aside>                        
+                        <figure>
+                            <img src="../images/projects/built_up/connections_menu.png">
+                            <figcaption>The available "connections" players can use to attach objects. (From the top, clockwise: hinge, glue, rope, spring, gear).</figcaption>
+                        </figure>
+                    </aside>
+                    <aside>                        
+                        <figure>
+                            <img src="../images/projects/built_up/mission_indoors.jpg">
+                            <figcaption>One of the more complicated indoor missions. Players must hit the cups from afar.</figcaption>
+                        </figure>
                     </aside>
                 </section>
             </article>
