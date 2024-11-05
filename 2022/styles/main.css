@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root
+{
+    --text-bg: black;
+    --main-bg: #eeeeee;
+    --slight-bg: #BBB;
+    --games-bg: #113311;
+}
+
+.old-browser-compat
+{
+    display: none;
+}
+.modern-browsers-only
+{
+    display: inline;
+}
+
+
+.page-header
+{
+    display: block;
+    padding:1em;
+    margin-bottom:0.5em;
+}
+
+.page-header h1
+{
+    /* font-family: "Menu";
+    font-size:3em;
+    text-decoration: underline; */
+    padding:0;
+    margin:0;
+}
+
+section, .page-header
+{
+    box-shadow:         4px 4px 6px black;
+    -moz-box-shadow:    4px 4px 6px black;
+    -o-box-shadow:      4px 4px 6px black;
+    -webkit-box-shadow: 4px 4px 6px black;
+}
+
+h1, h2, h3, h4
+{
+    font-family: 'Rubik', sans-serif;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark p
+{
+    color:white;
+}
+
+ul, p, a, blockquote
+{
+    font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
+    font-display: swap;
+}
+
+blockquote
+{
+    font-style: italic;
+}
+
+.emph-overlay
+{
+    display: block;
+    max-width:500px;
+    padding: 2px 8px 2px 8px;
+    margin-bottom: 12px;
+    margin-right:16px;
+
+}
+
+
+#homepage-return 
+{
+    right:2px;
+    position: absolute;
+    top:-2em;
+    display: block;
+}
+
+#homepage-return a
+{
+    padding:0.5em;
+    font-size:1em;
+    background-color:lightgray;
+    box-shadow: 2px 2px gray;
+    border-radius: 4px;
+    /* padding-bottom:1.2em; */
+}
+
+#homepage-return a i
+{
+    font-size:20px;
+    padding-right:8px;
+    color:black;
+}
+
+a
+{
+    color: #1f1ebf;
+}
+
+a:visited
+{
+    color: #5c167b;
+}
+
+.dark a
+{
+    color: #7ae2ff;
+}
+
+.dark a:visited
+{
+    color: #f4a1ff;
+}
+
+
+.italic
+{
+    font-style: italic;
+}
+
+body
+{
+    height:100%;
+}
+
+/* #bg-image
+{
+    background-color: #bdccff;
+    background-image: url("../images/built-up-courtyard.png");
+
+    
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    
+    height: 100%; 
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.disabled
+{
+    cursor:not-allowed;
+}
+
+button:disabled a
+{
+    cursor:not-allowed;
+}
+
+img
+{
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+/* Header - "Business Card" */
+body>header
+{
+    position: fixed;
+    z-index: 99;
+}
+
+#profession-text
+{
+    display:inline;
+    margin-top:-8px;
+    font-family: "Menu";
+    font-display: swap;
+    font-size:28px;
+    width:auto;
+}
+
+#profession-text-nomotion
+{
+    width: 100vw;
+    padding-top:8px;
+    line-height: 16px;
+    visibility: hidden;
+    margin-top:-8px;
+    font-family: "Menu";
+    font-display: swap;
+    font-size:28px;
+}
+
+#business-card
+{
+    position: relative;
+    z-index: 99;
+    margin-left: -8px;
+    background-color: whitesmoke;
+    /* border-radius: 0px 0px 12px 0px; */
+    height: 112px;
+    width:30em;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+
+    /* fancy image border */
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-image-source: url("../images/card_border.png");
+    border-image-slice: 48%;
+}
+
+#me_img
+{
+    width:96px;
+    image-rendering: pixelated;
+    height:auto;
+    float:left;
+    padding: 8px;
+}
+
+.cust {
+    -webkit-font-smoothing: none;
+    font-smooth: never;
+    filter: contrast(1);
+    font-family: 'Menu', sans-serif;
+    font-display: swap;
+    font-weight: 500;
+    font-size: 54px;
+    font-style: normal;
+    color: #222034;
+    padding:0;
+    margin:0;
+}
+
+#name
+{
+    margin:0;
+    padding:0;
+    margin-top: -8px;
+}
+
+/* 
+    Navigation Sidebar
+*/
+nav#sidebar.open
+{
+    transform:translateY(0);
+    visibility: visible;
+}
+
+nav#sidebar
+{
+    height:auto;
+    visibility: hidden;
+    z-index:10;
+
+    /* transition */
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+    transform: translateY(-100%);
+
+    clear:left;
+    background-color: black;
+    min-width:15em;
+    width: auto;
+    padding: 0px;
+    /* margin-top:2px; */
+    margin-left:-8px;
+    padding-bottom:8px;
+
+    position:fixed;
+
+    /* fancy image border */
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-image-source: url("../images/card_border.png");
+    border-image-slice: 16%;
+
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+}
+
+nav#sidebar ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left:8px;
+}
+nav#sidebar li a
+{
+    display: flex; 
+    align-items: center;
+    color: white;
+
+    padding-right:12px;
+}
+
+nav#sidebar li a:visited
+{
+    color: white;
+}
+
+nav#sidebar li a:hover
+{
+    background-color: #222034;
+    padding-left:6px;
+    text-shadow: 1px 1px darkgray;
+}
+
+.nav_icon
+{
+    padding-right:8px;
+    display:inline-block;
+    width:48px;
+    height:48px;
+}
+
+.nav_links {
+    -webkit-font-smoothing: none;
+    font-smooth: never;
+    filter: contrast(1);
+    font-family: 'Menu', sans-serif;
+    font-display: swap;
+    font-weight: 500;
+    font-size: 48px;
+    font-style: normal;
+    color: #ffffff;
+}
+
+#toggle-sidebar
+{
+    position: absolute;
+
+
+    bottom: -2em;
+    bottom: calc(-2em + 2px);
+    
+    left:-2px;
+    
+    width:2em;
+    height:2em;
+    visibility: visible !important;
+
+    cursor:pointer;
+
+    border:none;
+    display: block;
+    border-radius: 0px 0px 12px 0px;
+    background-color:#333;
+    color: white;
+    font-size:32px;
+    padding:0;
+    margin:0;
+}
+
+
+footer
+{
+    clear:both;
+    height:auto;
+    border-top:4px solid #777;
+
+    margin: 0px -32px -16px -8px;
+    padding: 8px 0px 8px 16px;
+
+    color:white;
+    width:100%;
+    background-color:#333;
+}
+
+
+
+main
+{
+    position: relative;
+    margin:auto;
+    width:70%;
+    max-width:1400px;
+}
+#title
+{
+    height:128px;
+}
+section
+{
+    background-color: whitesmoke;
+    position: relative;
+    text-align:left;
+    padding: 1px 0px 96px 12px;
+    height:auto;
+    /* min-height:400px; */
+    margin-bottom:12px;
+}
+
+section p
+{
+    clear:left;
+    padding:4px;
+    padding-left:16px;
+    padding-right:8px;
+}
+
+.selected, .selected:visited
+{
+    color:#32d2ff;
+}
+
+button
+{
+    border:none;
+    border-radius:8px;
+    background-color: lightgray;
+    box-shadow:2px 2px gray;
+    padding:8px;
+    cursor:pointer;
+}
+
+button:active
+{
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+button:disabled
+{
+    cursor:not-allowed;
+}
+
+.dl-icon 
+{
+    font-size:3em;
+    padding:0;
+    text-decoration: none;
+    color:black;
+}
+
+section h2
+{
+    float:left;
+    color: var(--text-bg);
+}
+
+/* for subpages (./games#canvas) */
+.nav-href
+{
+    position:absolute;
+    top:-120px;
+}
+
+.gray-overlay
+{
+    clear:left;
+    display: inline-block;
+    min-width:200px;
+    width: 0 auto;
+    background-color: #ddd;
+    box-shadow: 6px 6px rgba(0,0,0,0.4);
+    padding: 2px 0px 2px 8px;
+    margin-bottom: 12px;
+}
+
+.game-info
+{
+    clear:left;
+    list-style-type: none;
+    margin: 0;
+    margin-left: 12px;
+    padding: 0;
+}
+
+#temp-img
+{
+    display: none;
+}
